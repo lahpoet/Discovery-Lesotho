@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter tourist destinations and activities in Lesotho.">
+  <title>Discover Lesotho | Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Discover Lesotho</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Booking</a></li>
+          <li class="nav-item ms-lg-2"><button id="themeToggle" class="btn btn-sm theme-btn" type="button" aria-label="Switch colour theme">🌙</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-banner">
+      <div class="container">
+        <span class="eyebrow">EXPLORE</span>
+        <h1>Destinations & activities</h1>
+        <p>Use the search box and category buttons below. JavaScript filters the cards for you.</p>
+      </div>
+    </header>
+
+    <section class="section-space">
+      <div class="container">
+        <!-- Search and filter area -->
+        <div class="search-panel p-4 rounded-4 shadow-sm mb-5">
+          <label for="destinationSearch" class="form-label fw-bold">Search destinations</label>
+          <input type="search" id="destinationSearch" class="form-control form-control-lg" placeholder="Try: mountains, dam, culture..." aria-describedby="searchHelp">
+          <div id="searchHelp" class="form-text">You can search by destination name, category or activity.</div>
+
+          <div class="filter-buttons mt-3 d-flex flex-wrap gap-2" role="group" aria-label="Destination filters">
+            <button class="btn btn-primary filter-btn active" data-filter="all" type="button">All</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="nature" type="button">Nature</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="culture" type="button">Culture</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="adventure" type="button">Adventure</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="sightseeing" type="button">Sightseeing</button>
+          </div>
+        </div>
+
+        <div id="destinationGrid" class="row g-4">
+          <!-- JavaScript creates the destination cards here. This is one of the advanced requirements. -->
+        </div>
+
+        <div id="noResults" class="alert alert-warning d-none mt-4" role="alert">
+          No destinations matched your search. Try another word or select "All".
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow dark">ACTIVITY IDEAS</span>
+          <h2>Choose an experience</h2>
+        </div>
+        <div class="row g-4 mt-2">
+          <article class="col-sm-6 col-lg-3"><div class="activity-card"><span></span><h3>Hiking</h3><p>Explore mountain trails and viewpoints.</p></div></article>
+          <article class="col-sm-6 col-lg-3"><div class="activity-card"><span></span><h3>Pony trekking</h3><p>Experience a traditional highland activity.</p></div></article>
+          <article class="col-sm-6 col-lg-3"><div class="activity-card"><span></span><h3>Photography</h3><p>Capture waterfalls, valleys and villages.</p></div></article>
+          <article class="col-sm-6 col-lg-3"><div class="activity-card"><span></span><h3>Culture</h3><p>Learn about Basotho history and traditions.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-4 d-flex flex-wrap justify-content-between gap-2">
+      <p class="mb-0">Discover Lesotho — Student tourism project.</p>
+      <small>&copy; <span class="current-year"></span> All rights reserved.</small>
+    </div>
+  </footer>
+
+  <div id="toastArea" class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Lesotho, its geography, people, culture and tourism.">
+  <title>Discover Lesotho | About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Discover Lesotho</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Booking</a></li>
+          <li class="nav-item ms-lg-2"><button id="themeToggle" class="btn btn-sm theme-btn" type="button" aria-label="Switch colour theme">🌙</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-banner">
+      <div class="container">
+        <span class="eyebrow">ABOUT LESOTHO</span>
+        <h1>The Kingdom in the Sky</h1>
+        <p>Learn a little about the country, its people and why it is special to visitors.</p>
+      </div>
+    </header>
+
+    <section class="section-space">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Katse_Dam.jpg"
+                 class="img-fluid rounded-4 shadow-sm" alt="Mountain and green landscape representing the highlands of Lesotho">
+          </div>
+          <article class="col-lg-6">
+            <span class="eyebrow dark">A QUICK INTRODUCTION</span>
+            <h2>A country shaped by mountains and culture</h2>
+            <p>Lesotho is a mountainous country in Southern Africa. Its high altitude gives it a landscape of valleys, cliffs, rivers and dramatic mountain ranges.</p>
+            <p>The Basotho people have a rich cultural identity. Visitors can learn about traditional clothing, music, food, villages and the famous Basotho pony.</p>
+            <ul class="check-list">
+              <li>Capital city: Maseru</li>
+              <li>Known for highland scenery</li>
+              <li>Basotho culture and heritage</li>
+              <li>Outdoor and adventure tourism</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space section-soft">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="eyebrow dark">LEARN MORE</span>
+          <h2>Simple facts about Lesotho</h2>
+        </div>
+
+        <!-- Bootstrap accordion -->
+        <div class="accordion mt-4" id="factsAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#factOne">Why is Lesotho called the Kingdom in the Sky?</button>
+            </h3>
+            <div id="factOne" class="accordion-collapse collapse show" data-bs-parent="#factsAccordion">
+              <div class="accordion-body">Lesotho is famous for its high elevation and mountainous terrain. Much of the country sits high above sea level.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#factTwo">What is Basotho culture?</button>
+            </h3>
+            <div id="factTwo" class="accordion-collapse collapse" data-bs-parent="#factsAccordion">
+              <div class="accordion-body">Basotho culture includes traditional clothing, music, food, crafts, community traditions and a strong connection with the highland environment.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#factThree">What can tourists do?</button>
+            </h3>
+            <div id="factThree" class="accordion-collapse collapse" data-bs-parent="#factsAccordion">
+              <div class="accordion-body">Popular tourism ideas include sightseeing, hiking, pony trekking, cultural experiences, photography and winter activities.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow dark">TRAVEL CHECKLIST</span>
+          <h2>Before you visit</h2>
+        </div>
+        <div class="row g-4">
+          <article class="col-md-4">
+            <div class="feature-card h-100"><h3>Plan your route</h3><p>Mountain roads can take longer than expected. Give yourself enough time and check your route before travelling.</p></div>
+          </article>
+          <article class="col-md-4">
+            <div class="feature-card h-100"><h3>Pack for the weather</h3><p>Highland weather can change quickly. Comfortable shoes and warm layers are useful for outdoor activities.</p></div>
+          </article>
+          <article class="col-md-4">
+            <div class="feature-card h-100"><h3>Respect local communities</h3><p>Ask permission before taking close-up photographs of people and respect local customs and heritage sites.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-4 d-flex flex-wrap justify-content-between gap-2">
+      <p class="mb-0">Discover Lesotho — Student tourism project.</p>
+      <small>&copy; <span class="current-year"></span> All rights reserved.</small>
+    </div>
+  </footer>
+
+  <div id="toastArea" class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

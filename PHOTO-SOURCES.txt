@@ -1,0 +1,17 @@
+REAL LESOTHO PHOTO SOURCES USED BY THE WEBSITE
+
+Maletsunyane Falls
+https://commons.wikimedia.org/wiki/File:Maletsunyanefalls.JPG
+Photographer: BagelBelt. Public domain.
+
+Katse Dam
+https://commons.wikimedia.org/wiki/File:Katse_Dam.jpg
+Photographer: SkyPixels. Creative Commons Attribution-ShareAlike 4.0.
+
+Thaba-Bosiu
+https://commons.wikimedia.org/wiki/File:Thaba_Bosiu.jpg
+Photographer: Vanellus Foto. Creative Commons Attribution-ShareAlike / GFDL.
+
+The HTML and JavaScript currently load these real photos from Wikimedia Commons URLs.
+The SVG illustrations already in this folder are preserved as part of the original project.
+Check each source page for the full licence terms before redistribution.

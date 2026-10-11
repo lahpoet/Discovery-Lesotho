@@ -1,0 +1,1043 @@
+
+:root {
+  /* Main sky blue colour */
+  --blue: #4aa8d8;
+
+  /* Darker sky blue for hover effects */
+  --blue-dark: #247ca8;
+
+  /* Lighter sky blue */
+  --sky: #70c4e8;
+
+  /* Main gray background */
+  --gray: #cfd3d7;
+
+  /* Dark gray */
+  --gray-dark: #59636c;
+
+  /* Very light gray */
+  --gray-light: #e6e9ec;
+
+  /* Main text colour */
+  --text: #252b30;
+
+  /* Less important text */
+  --muted: #66717a;
+
+  /* Card background */
+  --white: #e9ecef;
+
+  /* Borders */
+  --border: #b9c0c6;
+
+  /* Shadow used on cards */
+  --shadow: 0 12px 30px rgba(45, 60, 70, 0.15);
+
+  /* Rounded corners */
+  --radius: 18px;
+}
+
+
+/* =========================================================
+   2. BASIC WEBSITE SETTINGS
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  /* Main page background is gray */
+  background: var(--gray);
+
+  color: var(--text);
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  line-height: 1.7;
+}
+
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+
+/* Normal links */
+a {
+  color: var(--blue-dark);
+}
+
+
+/* Hovering over links */
+a:hover {
+  color: var(--blue);
+}
+
+
+/* =========================================================
+   3. DARK MODE
+   ---------------------------------------------------------
+   The dark mode is still available because it is one of
+   the JavaScript features of the website.
+   ========================================================= */
+
+body.dark-mode {
+  --text: #edf4f8;
+
+  --muted: #b8c5cd;
+
+  --white: #20282e;
+
+  --gray: #171e23;
+
+  --gray-light: #252e35;
+
+  --border: #3b474f;
+
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+  background: #171e23;
+}
+
+.dark-mode a {
+  color: #83d3f4;
+}
+
+
+/* =========================================================
+   4. NAVIGATION BAR
+   ========================================================= */
+
+.site-nav {
+  /* Gray navigation bar */
+  background: rgba(230, 233, 236, 0.97);
+
+  border-bottom: 2px solid var(--blue);
+
+  backdrop-filter: blur(12px);
+}
+
+
+/* Dark mode navigation */
+.dark-mode .site-nav {
+  background: rgba(27, 35, 41, 0.97);
+}
+
+
+/* Website name */
+.navbar-brand {
+  color: #247ca8;
+  font-weight: 800;
+}
+
+
+/* Navigation links */
+.nav-link {
+  font-weight: 600;
+  color: #3f4a52;
+
+  transition: 0.2s ease;
+}
+
+
+/* Navigation hover */
+.nav-link:hover,
+.nav-link.active {
+  color: var(--blue-dark);
+}
+
+
+/* Dark navigation text */
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+  color: #f3f7fa;
+}
+
+
+/* Theme button */
+.theme-btn {
+  border: 1px solid var(--blue);
+
+  background: var(--gray-light);
+
+  color: var(--blue-dark);
+
+  border-radius: 10px;
+}
+
+.theme-btn:hover {
+  background: var(--blue);
+
+  color: white;
+}
+
+
+/* =========================================================
+   5. HERO SECTION
+   ========================================================= */
+
+.hero-section {
+  min-height: 78vh;
+
+  display: flex;
+
+  align-items: center;
+
+  color: white;
+
+  /*
+    The blue-gray overlay makes the text easier to read
+    over the mountain image.
+  */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(55, 95, 115, 0.90),
+      rgba(75, 150, 190, 0.45)
+    ),
+    url("https://upload.wikimedia.org/wikipedia/commons/8/8d/Maletsunyanefalls.JPG") center/cover;
+}
+
+
+/* Bootstrap-style helper */
+.min-vh-75 {
+  min-height: 78vh;
+}
+
+
+/* Main hero heading */
+.hero-section h1 {
+  max-width: 850px;
+
+  font-size: clamp(2.7rem, 7vw, 5.8rem);
+
+  letter-spacing: -0.04em;
+}
+
+
+/* Hero paragraph */
+.hero-section p {
+  max-width: 680px;
+
+  color: rgba(255, 255, 255, 0.94);
+}
+
+
+/* Small heading above hero title */
+.eyebrow {
+  display: inline-block;
+
+  margin-bottom: 0.7rem;
+
+  color: #bcecff;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* Eyebrow used on light backgrounds */
+.eyebrow.dark {
+  color: var(--blue-dark);
+}
+
+
+/* =========================================================
+   6. COMMON SECTIONS
+   ========================================================= */
+
+.section-space {
+  padding: 5.5rem 0;
+}
+
+
+/*
+   Soft gray section.
+   This helps separate different parts of the page.
+*/
+.section-soft {
+  background: #bfc5ca;
+}
+
+
+/* Dark mode soft section */
+.dark-mode .section-soft {
+  background: #20282e;
+}
+
+
+/* Section heading */
+.section-heading {
+  max-width: 760px;
+}
+
+
+/* Center section heading */
+.section-heading.text-center {
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+
+/* Section paragraph */
+.section-heading p {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   7. CARDS
+   ========================================================= */
+
+.feature-card,
+.destination-card,
+.activity-card,
+.form-card,
+.info-box {
+  /*
+    Cards are light gray instead of white.
+  */
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+
+/* Feature card */
+.feature-card {
+  padding: 2rem;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Card hover effect */
+.feature-card:hover,
+.destination-card:hover,
+.activity-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 16px 35px rgba(40, 70, 85, 0.20);
+}
+
+
+/* =========================================================
+   8. FEATURE ICON AREA
+   ========================================================= */
+
+.feature-icon {
+  font-size: 2.3rem;
+
+  margin-bottom: 1rem;
+
+  color: var(--blue-dark);
+}
+
+
+/* =========================================================
+   9. DESTINATION CARDS
+   ========================================================= */
+
+.destination-card {
+  position: relative;
+
+  overflow: hidden;
+
+  transition: transform 0.2s ease;
+}
+
+
+/* Destination image */
+.destination-card img {
+  width: 100%;
+
+  height: 230px;
+
+  object-fit: cover;
+}
+
+
+/* Destination card content */
+.destination-card .card-body {
+  padding: 1.5rem;
+}
+
+
+/* Destination title */
+.destination-card h3 {
+  font-size: 1.35rem;
+
+  color: var(--blue-dark);
+}
+
+
+/* =========================================================
+   10. ACTIVITY CARDS
+   ========================================================= */
+
+.activity-card {
+  padding: 1.6rem;
+
+  height: 100%;
+
+  transition: transform 0.2s ease;
+}
+
+
+/* Activity title */
+.activity-card h3 {
+  margin-top: 0.7rem;
+
+  color: var(--blue-dark);
+}
+
+
+/* =========================================================
+   11. CAROUSEL
+   ========================================================= */
+
+.carousel-image {
+  height: 520px;
+
+  object-fit: cover;
+
+  /*
+    Slightly darkens the image so carousel text
+    remains easy to read.
+  */
+  filter: brightness(0.70);
+}
+
+
+/* Carousel text box */
+.carousel-caption {
+  background: rgba(50, 80, 95, 0.75);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 14px;
+
+  padding: 1rem;
+}
+
+
+/* =========================================================
+   12. CALL TO ACTION
+   ========================================================= */
+
+.cta-box {
+  padding: 2.2rem;
+
+  border-radius: var(--radius);
+
+  /*
+    Sky blue gradient.
+  */
+  background:
+    linear-gradient(
+      135deg,
+      #3b91bd,
+      #70c4e8
+    );
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   13. INTERNAL PAGE BANNER
+   ========================================================= */
+
+.page-banner {
+  padding: 6rem 0;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(55, 95, 115, 0.90),
+      rgba(75, 150, 190, 0.55)
+    ),
+    url("https://upload.wikimedia.org/wikipedia/commons/4/47/Katse_Dam.jpg") center/cover;
+}
+
+
+/* Internal page heading */
+.page-banner h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+}
+
+
+/* =========================================================
+   14. ABOUT PAGE LIST
+   ========================================================= */
+
+.check-list {
+  padding-left: 1.3rem;
+}
+
+
+.check-list li {
+  margin-bottom: 0.6rem;
+}
+
+
+/* =========================================================
+   15. SEARCH PANEL
+   ========================================================= */
+
+.search-panel {
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   16. FORM CONTROLS
+   ========================================================= */
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+
+  border-color: var(--border);
+
+  padding: 0.75rem 0.9rem;
+
+  background-color: var(--white);
+
+  color: var(--text);
+}
+
+
+/* When user clicks inside an input */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 0.2rem rgba(74, 168, 216, 0.20);
+}
+
+
+/* Placeholder text */
+.form-control::placeholder {
+  color: #7a858d;
+}
+
+
+/* =========================================================
+   17. GALLERY
+   ========================================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+
+/* Gallery image button */
+.gallery-item {
+  position: relative;
+
+  border: 0;
+
+  padding: 0;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background: #59636c;
+
+  min-height: 250px;
+}
+
+
+/* Gallery images */
+.gallery-item img {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 250px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* Zoom image when hovering */
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+
+/* Gallery image title */
+.gallery-item span {
+  position: absolute;
+
+  left: 1rem;
+
+  bottom: 1rem;
+
+  color: white;
+
+  font-weight: 700;
+
+  background: rgba(55, 95, 115, 0.85);
+
+  padding: 0.4rem 0.7rem;
+
+  border-radius: 8px;
+
+  border-left: 3px solid var(--sky);
+}
+
+
+/* Gallery modal */
+.gallery-modal-content {
+  background: var(--gray);
+
+  color: var(--text);
+}
+
+
+/* =========================================================
+   18. FORMS
+   ========================================================= */
+
+.form-card {
+  padding: 2rem;
+}
+
+
+/* Calculator result area */
+.calculator-result {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.2rem;
+
+  border-radius: 14px;
+
+  background: var(--gray-light);
+
+  border: 1px solid var(--border);
+}
+
+
+/* Calculator price */
+.calculator-result strong {
+  color: var(--blue-dark);
+
+  font-size: 1.6rem;
+}
+
+
+/* =========================================================
+   19. INFORMATION BOXES
+   ========================================================= */
+
+.info-box {
+  padding: 2rem;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   20. ALERTS
+   ========================================================= */
+
+.alert {
+  border-radius: 12px;
+}
+
+
+/* Success message */
+.alert-success {
+  background: #d8edf5;
+
+  border-color: #8bcce5;
+
+  color: #24576c;
+}
+
+
+/* Error message */
+.alert-danger {
+  background: #e4dfe0;
+
+  border-color: #c6aeb2;
+
+  color: #683d43;
+}
+
+
+/* =========================================================
+   21. FOOTER
+   ========================================================= */
+
+.site-footer {
+  /*
+    Dark gray footer with sky blue top border.
+  */
+  background: #3f484f;
+
+  color: #e8f1f5;
+
+  border-top: 4px solid var(--blue);
+}
+
+
+/* Footer links */
+.site-footer a {
+  color: #aee5fa;
+
+  text-decoration: none;
+}
+
+
+/* Footer link hover */
+.site-footer a:hover {
+  color: white;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   22. BOOTSTRAP BUTTON CUSTOMISATION
+   ---------------------------------------------------------
+   Bootstrap buttons are changed so the website does not
+   look like a normal Bootstrap template.
+   ========================================================= */
+
+
+/* Main button */
+.btn-primary {
+  background: var(--blue-dark);
+
+  border-color: var(--blue-dark);
+
+  color: white;
+}
+
+
+/* Main button hover */
+.btn-primary:hover {
+  background: #1d6b91;
+
+  border-color: #1d6b91;
+
+  color: white;
+
+  transform: translateY(-1px);
+}
+
+
+/* Outline button */
+.btn-outline-primary {
+  color: var(--blue-dark);
+
+  border-color: var(--blue-dark);
+}
+
+
+/* Outline button hover */
+.btn-outline-primary:hover {
+  background: var(--blue-dark);
+
+  border-color: var(--blue-dark);
+
+  color: white;
+}
+
+
+/* All buttons */
+.btn {
+  border-radius: 10px;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+
+/* Sky blue secondary button */
+.btn-info {
+  background: var(--sky);
+
+  border-color: var(--sky);
+
+  color: #183b4c;
+}
+
+
+.btn-info:hover {
+  background: var(--blue);
+
+  border-color: var(--blue);
+
+  color: white;
+}
+
+
+/* =========================================================
+   23. BADGES
+   ========================================================= */
+
+.badge {
+  background: var(--blue) !important;
+
+  color: white !important;
+}
+
+
+/* =========================================================
+   24. ACCORDION
+   ========================================================= */
+
+.accordion-item {
+  background: var(--white);
+
+  border-color: var(--border);
+}
+
+
+.accordion-button {
+  background: var(--gray-light);
+
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+
+/* Accordion when opened */
+.accordion-button:not(.collapsed) {
+  background: #c1e6f5;
+
+  color: #24576c;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   25. TABLES
+   ========================================================= */
+
+.table {
+  --bs-table-bg: var(--white);
+
+  --bs-table-color: var(--text);
+
+  border-color: var(--border);
+}
+
+
+/* Table headings */
+.table thead {
+  background: var(--blue-dark);
+
+  color: white;
+}
+
+
+/* Table hover */
+.table-hover tbody tr:hover {
+  background: #d5edf7;
+}
+
+
+/* =========================================================
+   26. RESPONSIVE DESIGN
+   ---------------------------------------------------------
+   Bootstrap handles many responsive features, but I also
+   use my own media queries.
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .section-space {
+    padding: 4rem 0;
+  }
+
+
+  .hero-section {
+    min-height: 70vh;
+  }
+
+
+  .min-vh-75 {
+    min-height: 70vh;
+  }
+
+
+  .cta-box {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   27. MOBILE PHONE DESIGN
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .hero-section {
+    min-height: 78vh;
+  }
+
+
+  .hero-section h1 {
+    font-size: 2.7rem;
+  }
+
+
+  .carousel-image {
+    height: 380px;
+  }
+
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .page-banner {
+    padding: 4rem 0;
+  }
+
+
+  .form-card,
+  .feature-card {
+    padding: 1.4rem;
+  }
+
+
+  .cta-box {
+    padding: 1.5rem;
+  }
+}
+
+
+/* =========================================================
+   28. DARK MODE BOOTSTRAP AREAS
+   ========================================================= */
+
+.dark-mode .accordion-item,
+.dark-mode .accordion-button,
+.dark-mode .accordion-body {
+  background: #20282e;
+
+  color: var(--text);
+
+  border-color: var(--border);
+}
+
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background: #29434f;
+
+  color: #bdeaff;
+}
+
+
+.dark-mode .text-muted,
+.dark-mode .form-text {
+  color: var(--muted) !important;
+}
+
+
+/* Dark mode forms */
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background: #20282e;
+
+  color: #edf4f8;
+
+  border-color: #3b474f;
+}
+
+
+/* Dark mode search panel */
+.dark-mode .search-panel,
+.dark-mode .feature-card,
+.dark-mode .destination-card,
+.dark-mode .activity-card,
+.dark-mode .form-card,
+.dark-mode .info-box {
+  background: #20282e;
+
+  border-color: #3b474f;
+}
+
+
+/* Dark mode table */
+.dark-mode .table {
+  --bs-table-bg: #20282e;
+
+  --bs-table-color: #edf4f8;
+}
